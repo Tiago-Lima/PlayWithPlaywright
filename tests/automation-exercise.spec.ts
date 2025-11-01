@@ -9,7 +9,7 @@ test.describe('Automation Exercise Test Suite', () => {
         await expect(page).toHaveTitle('Automation Exercise');
     });
 
-    test.fixme('TC1 - Register User', async ({ page }) => {
+    test.fixme('TC1 - Register User (Need to implement an delay in some point)', async ({ page }) => {
         const email = `teste${Date.now()}@teste.com`;
         const username = 'Teste User';
 
