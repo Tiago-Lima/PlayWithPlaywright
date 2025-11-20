@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 test.describe('Automation Exercise Test Suite', () => {
     test.beforeEach(async ({ page }) => {
         // Navegar para a página inicial antes de cada teste
-        await page.goto('https://automationexercise.com/');
+        await page.goto('/');
         
         // Verificar se a página carregou corretamente
         await expect(page).toHaveTitle('Automation Exercise');
