@@ -28,6 +28,8 @@ export class HomePage {
           await this.page.goto('/');
         }
 
+        // *****************************     Carrousel methods ***********************************
+        
         /**
          * Click on previous button of carrousel
          * 
@@ -45,7 +47,12 @@ export class HomePage {
        * @param index Number of slide (0, 1, 2...)
        */
       async goToCorrouselSlide(index: number) {
-        await this.page.locator(`li[data-slide-to="${index}"]`).click();
+         console.log(await this.indicators.count());
+        console.log(await this.indicators.nth(index).count());
+        await this.indicators.nth(index).click();
+       
+
+
       }
 
        /**
@@ -62,7 +69,7 @@ export class HomePage {
        * Validate if the active slide is the expected one.
        * @param expected
        */
-     async validarSlideAtivo(expected: number) {
+     async validateSlideActive(expected: number): Promise<void> {
      const active = await this.getActiveCarrouselSlide();
        if (active !== expected) {
         throw new Error(
@@ -70,4 +77,8 @@ export class HomePage {
       );
      }
     }
+
+    // ***************************************************************************************
+
+    
   }

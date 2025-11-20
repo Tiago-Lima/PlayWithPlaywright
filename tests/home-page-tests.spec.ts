@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { HomePage } from '../pages/HomePage';
 
 test.describe('Tests for home page components', () => {
-  test('homePage', async ({ page }) => {
+  test('validating carrousel', async ({ page }) => {
     const homePage = new HomePage(page);
 
   await homePage.visit();
@@ -18,7 +18,7 @@ test.describe('Tests for home page components', () => {
 
   //Go to previous slide
   await homePage.goToPreviousCarrousel();
-  await expect(await homePage.getActiveCarrouselSlide()).toBe(1);
+  await homePage.validateSlideActive(1);
 
 });
 
