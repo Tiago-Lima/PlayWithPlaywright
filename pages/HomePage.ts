@@ -4,6 +4,8 @@ export class HomePage {
   readonly page: Page;
 
   readonly logo: Locator;
+  readonly menuItens: Locator;
+
     
   readonly carrousel: Locator;
      //Carrousel slide buttons
@@ -16,7 +18,7 @@ export class HomePage {
     constructor(page: Page) {   
     this.page = page;
     this.logo = page.locator('.logo.pull-left a');
-
+    this.menuItens = page.locator('.fa fa-home');
     this.carrousel = page.locator('#slider-carousel');
       this.previousButton = this.carrousel.locator('a[data-slide="prev"]');
       this.nextButton = this.carrousel.locator('a[data-slide="next"]');
@@ -80,7 +82,16 @@ export class HomePage {
      }
     }
 
-    // ***************************************************************************************
+    // ***************************** Navegation methods **********************************************************
+
+      async getMenuItemsCount() {
+        return await this.menuItens.count();
+      }
+
+      async getMenuItem(i: number) {
+        return this.menuItens.nth(i);
+      }
+
 
     
   }

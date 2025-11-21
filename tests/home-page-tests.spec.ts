@@ -23,7 +23,24 @@ test.describe('Tests for home page components', () => {
   await expect(homePage.logo.locator('img')).toHaveAttribute('alt','Website for automation practice'); 
   });
 
-  
+  //Validating Menu items
+  test('validating menu items', async ({ page }) => {
+    const homePage = new HomePage(page);
+
+    const expectedText = [
+      'Home','Products','Cart','Signup / Login','Test Cases','API Testing','Contact us'
+    ];
+
+    const count = await homePage.getMenuItemsCount();
+
+    for (let i = 0; i < count; i++) {
+      const item = await homePage.getMenuItem(i);
+      await expect(item).toHaveText(expectedText[i]);
+      await expect(item).toBeVisible();
+      await expect(item).toBeEnabled();
+    }
+  });
+
 // ***************************************************************
 
 //validating carrousel functionality
@@ -43,5 +60,7 @@ test.describe('Tests for home page components', () => {
   await homePage.validateSlideActive(1);
 
 });
+// ************************ Validating Product Contents ***************************************
+
 
 });
