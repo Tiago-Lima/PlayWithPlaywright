@@ -60,7 +60,20 @@ test.describe('Tests for home page components', () => {
   await homePage.validateSlideActive(1);
 
 });
+// Validating carrousel buttons for each slide
+  test('validating carrousel buttons', async ({ page }) => {
+    const homePage = new HomePage(page);
+    //Click on Test Cases button
+    for (let i = 0; i < 3; i++) {
+      await homePage.goToCorrouselSlide(i);
+     const testCaseButton = homePage.getCarrouselButtonTestCase();
+     const apiButton = homePage.getCarrouselButtonApiTesting();
+     await expect(testCaseButton).toBeVisible();
+     await expect(testCaseButton).toBeEnabled();
+     await expect(apiButton).toBeVisible();
+     await expect(apiButton).toBeEnabled();
+   
+    }
+  });
 // ************************ Validating Product Contents ***************************************
-
-
-});
+});     
