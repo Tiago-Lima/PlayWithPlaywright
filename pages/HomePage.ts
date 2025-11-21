@@ -1,24 +1,26 @@
 import  { type Locator, type Page } from '@playwright/test';
 
 export class HomePage {
-    readonly page: Page;
-    
-    readonly carrousel: Locator;
-     // Corrousel slide buttons
-  readonly previousButton: Locator;
-  readonly nextButton: Locator;
+  readonly page: Page;
 
-    //Corrousel indicators
-  readonly indicators: Locator;
+  readonly logo: Locator;
+    
+  readonly carrousel: Locator;
+     //Carrousel slide buttons
+    readonly previousButton: Locator;
+    readonly nextButton: Locator;
+    //Carrousel indicators
+    readonly indicators: Locator;
 
 
     constructor(page: Page) {   
     this.page = page;
+    this.logo = page.locator('.logo.pull-left a');
 
     this.carrousel = page.locator('#slider-carousel');
-    this.previousButton = this.carrousel.locator('a[data-slide="prev"]');
-    this.nextButton = this.carrousel.locator('a[data-slide="next"]');
-    this.indicators = this.carrousel.locator('.carousel-indicators > li');
+      this.previousButton = this.carrousel.locator('a[data-slide="prev"]');
+      this.nextButton = this.carrousel.locator('a[data-slide="next"]');
+      this.indicators = this.carrousel.locator('.carousel-indicators > li');
     }
 
         /**
@@ -28,6 +30,8 @@ export class HomePage {
           await this.page.goto('/');
         }
 
+        // ***************************** Carrousel methods ***********************************
+        
         /**
          * Click on previous button of carrousel
          * 
@@ -45,7 +49,12 @@ export class HomePage {
        * @param index Number of slide (0, 1, 2...)
        */
       async goToCorrouselSlide(index: number) {
-        await this.page.locator(`li[data-slide-to="${index}"]`).click();
+         console.log(await this.indicators.count());
+        console.log(await this.indicators.nth(index).count());
+        await this.indicators.nth(index).click();
+       
+
+
       }
 
        /**
@@ -60,9 +69,9 @@ export class HomePage {
 
        /**
        * Validate if the active slide is the expected one.
-       * @param expected
+       * @param expected Number of expected slide (0, 1, 2...)
        */
-     async validarSlideAtivo(expected: number) {
+     async validateSlideActive(expected: number): Promise<void> {
      const active = await this.getActiveCarrouselSlide();
        if (active !== expected) {
         throw new Error(
@@ -70,4 +79,8 @@ export class HomePage {
       );
      }
     }
+
+    // ***************************************************************************************
+
+    
   }
