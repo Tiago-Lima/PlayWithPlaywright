@@ -1,4 +1,4 @@
-
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/Tiago-Lima/PlayWithPlaywright/playwright.yml?branch=main&style=for-the-badge)](https://github.com/Tiago-Lima/PlayWithPlaywright/actions)  [![Playwright](https://img.shields.io/badge/-playwright-%232EAD33?style=for-the-badge&logo=playwright&logoColor=white)](https://playwright.dev/)  [![Node.js](https://img.shields.io/badge/node.js-%2343853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)  
 # 📘 **PlayWithPlaywright**
 
 Projeto criado para desenvolver habilidades práticas com **Playwright**, aplicando boas práticas de **automação de testes end-to-end**, **Page Object Model (POM)**, testes paralelos, relatórios e integração com CI.
@@ -11,8 +11,8 @@ Projeto criado para desenvolver habilidades práticas com **Playwright**, aplica
 * **TypeScript**
 * **Playwright Test**
 * **Page Object Model (POM)**
-* **Allure Reports** (opcional)
-* **GitHub Actions** (pipeline)
+* **Allure Reports** 
+* **GitHub Actions** 
 
 ---
 
@@ -201,7 +201,7 @@ Adicione estes scripts caso ainda não tenha:
 
 Este repositório demonstra:
 
-* domínio do Playwright com TypeScript
+* Uso do Playwright com TypeScript
 * criação de testes robustos e confiáveis
 * validações de UI, animações, hover, carrosséis etc.
 * uso correto de Page Objects
