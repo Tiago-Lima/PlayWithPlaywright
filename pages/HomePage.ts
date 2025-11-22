@@ -185,7 +185,7 @@ export class HomePage {
         return overlay.locator('.add-to-cart');
       }
          
-
+//**************************************************************** */
       
 
     
