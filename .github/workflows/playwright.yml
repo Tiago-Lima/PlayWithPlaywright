@@ -23,7 +23,17 @@ jobs:
     # Generate Allure Report  
     - name: Generate Allure Report
       run: npx allure generate allure-results --clean -o allure-report
-    #Publish Allure Report as artifact
+    #publishing on github pages
+    - name: Deploy Allure Report to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      if: ${{ !cancelled() }}
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: allure-report
+        force_orphan: true
+
+    #Publish Allure Report as artifact (optional)
     - name: Upload Allure Report
       uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
