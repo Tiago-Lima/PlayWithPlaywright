@@ -5,10 +5,19 @@ import * as allure from "allure-js-commons";
 test.describe('Tests for home page components', () => {
   
   test.beforeEach('Validating if the page is completely loaded',async ({page})=>{
+  await allure.feature('Home Page');
+  await allure.testCaseId('Background001');
+  await allure.displayName('Validating home page load');
+  await allure.description('This is a background step that ensures the home page is fully loaded before executing any test cases within this suite.');
+  await allure.owner('Tiago Lima');
+  await allure.severity('blocker');
+  await allure.tags('home-page','background-step');
+
   const homePage = new HomePage(page);
   await homePage.visit();
   expect(page).toHaveTitle('Automation Exercise');
-  });
+  
+});
 
 // Validating status code 200
   test ('validating status code 200', async ({page})=>{
@@ -20,8 +29,8 @@ test.describe('Tests for home page components', () => {
     await allure.severity('critical');
     await allure.tags('home-page','status-code');
     
-
   const response = await page.request.get('/');
+    
   expect(response.status()).toBe(200);
   });
 
