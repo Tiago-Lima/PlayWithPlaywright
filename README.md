@@ -139,21 +139,19 @@ O projeto usa **Page Object Model (POM)** para garantir manutenibilidade e legib
 
 O Playwright gera relatórios automaticamente.
 
-### ✔ **Abrir o relatório HTML**
+### ✔ **Abrir o relatório gerado pelo PlayWright**
 
 Após rodar os testes:
 
 ```bash
 npx playwright show-report
 ```
+### ✔ **Abrir o relatório gerado pelo Allure Reports**
 
-Ou abrir manualmente em:
-
+```bash
+npm run allure:generate
+npm run allure:open
 ```
-playwright-report/index.html
-```
-
----
 
 # 🔧 **6. Pipeline (CI/CD) – GitHub Actions**
 
@@ -184,14 +182,18 @@ Esses arquivos ficam disponíveis para **download em “Artifacts”**.
 
 # 🧪 **7. Scripts úteis (package.json)**
 
-Adicione estes scripts caso ainda não tenha:
+
 
 ```json
 "scripts": {
   "test": "playwright test",
   "test:ui": "playwright test --ui",
-  "report": "playwright show-report",
-  "codegen": "playwright codegen"
+  "codegen": "playwright codegen",
+
+  "allure:generate": "npx allure generate ./allure-results --clean",
+  "allure:open": "npx allure open",
+  "allure:full": "playwright test && npx allure generate ./allure-results --clean && npx allure open"
+
 }
 ```
 

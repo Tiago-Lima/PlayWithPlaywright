@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { HomePage } from '../pages/HomePage';
 import * as allure from "allure-js-commons";
+import 'allure-playwright';
 
 test.describe('Tests for home page components', () => {
   
