@@ -3,7 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+"scripts": {
+  "test": "playwright test",
+  "test-ui": "playwright test --ui",
+  "codegen": "playwright codegen",
+
+  "allure:generate": "npx allure generate ./allure-results --clean",
+  "allure:open": "npx allure open",
+  "allure:full": "playwright test && npx allure generate ./allure-results --clean && npx allure open"
+
+},
   "keywords": [],
   "author": "",
   "license": "ISC",

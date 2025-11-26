@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import 'allure-playwright';
 
 test.describe('Automation Exercise Test Suite', () => {
     test.beforeEach(async ({ page }) => {
