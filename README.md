@@ -139,6 +139,12 @@ O projeto usa **Page Object Model (POM)** para garantir manutenibilidade e legib
 
 O Playwright gera relatórios automaticamente.
 
+### Primeiro copiar o histórico de testes para ter um relatório completo
+
+Antes de gerar o Allure Reports execute o seguinte comando:
+```bash
+npm run copy:history
+```
 ### ✔ **Abrir o relatório gerado pelo PlayWright**
 
 Após rodar os testes:
@@ -190,10 +196,10 @@ Esses arquivos ficam disponíveis para **download em “Artifacts”**.
   "test:ui": "playwright test --ui",
   "codegen": "playwright codegen",
 
-  "allure:generate": "npx allure generate ./allure-results --clean",
-  "allure:open": "npx allure open",
-  "allure:full": "playwright test && npx allure generate ./allure-results --clean && npx allure open"
+  "copy:history": "node copy-history.js",
 
+  "allure:generate": "npx allure generate ./allure-results --clean",
+  "allure:open": "npx allure open"
 }
 ```
 

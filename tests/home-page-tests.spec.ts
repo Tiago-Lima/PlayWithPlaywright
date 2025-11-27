@@ -1,6 +1,8 @@
 import { test, expect } from '@playwright/test';
 import { HomePage } from '../pages/HomePage';
-import { allure } from 'allure-playwright';
+//import { allure } from 'allure-playwright';
+import * as allure from "allure-js-commons";
+import {ContentType} from 'allure-js-commons';
 
 test.describe('Tests for home page components', () => {
   
@@ -42,8 +44,14 @@ test.describe('Tests for home page components', () => {
   const homePage = new HomePage(page);
   await expect(homePage.logo.locator('img')).toBeVisible();
   await expect(homePage.logo.locator('img')).toHaveAttribute('alt','Website for automation practice'); 
-  });
 
+  //Attach screenshot to Allure report
+  const screenshot =  await homePage.logo.screenshot();
+  await allure.attachment("Screenshot_Logo", screenshot, {
+    contentType: ContentType.PNG,
+   });
+
+  });
   //Validating Menu items
   test('validating menu items', async ({ page }) => {
     await allure.feature('Home Page');
@@ -188,4 +196,5 @@ test.describe('Tests for home page components', () => {
           await expect(productPrice).toBeVisible();
         }
       });
-});    
+    
+});

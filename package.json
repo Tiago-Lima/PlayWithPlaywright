@@ -5,16 +5,18 @@
   "main": "index.js",
 "scripts": {
   "test": "playwright test",
+  "test:homepage": "playwright test tests/home-page-tests.spec.ts",
   "test-ui": "playwright test --ui",
   "codegen": "playwright codegen",
 
+  "copy:history": "node copy-history.js",
+
   "allure:generate": "npx allure generate ./allure-results --clean",
-  "allure:open": "npx allure open",
-  "allure:full": "playwright test && npx allure generate ./allure-results --clean && npx allure open"
+  "allure:open": "npx allure open"
 
 },
   "keywords": [],
-  "author": "",
+  "author": "Tiago Lima",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.56.1",
