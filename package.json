@@ -12,8 +12,7 @@
   "copy:history": "node copy-history.js",
 
   "allure:generate": "npx allure generate ./allure-results --clean",
-  "allure:open": "npx allure open",
-  "allure:full": "playwright test && npx allure generate ./allure-results --clean && npx allure open"
+  "allure:open": "npx allure open"
 
 },
   "keywords": [],
