@@ -1,34 +1,27 @@
 import { test, expect } from '@playwright/test';
 import { HomePage } from '../pages/HomePage';
-import * as allure from "allure-js-commons";
-import 'allure-playwright';
+import { allure } from 'allure-playwright';
 
 test.describe('Tests for home page components', () => {
   
-  test.beforeEach('Validating if the page is completely loaded',async ({page})=>{
-  await allure.feature('Home Page');
-  await allure.testCaseId('Background001');
-  await allure.displayName('Validating home page load');
-  await allure.description('This is a background step that ensures the home page is fully loaded before executing any test cases within this suite.');
-  await allure.owner('Tiago Lima');
-  await allure.severity('blocker');
-  await allure.tags('home-page','background-step');
+  test.beforeEach('Validating if the page is completely loaded', async ({ page }) => {
+ 
 
   const homePage = new HomePage(page);
   await homePage.visit();
-  expect(page).toHaveTitle('Automation Exercise');
+  await expect(page).toHaveTitle('Automation Exercise');
   
 });
 
 // Validating status code 200
   test ('validating status code 200', async ({page})=>{
-    await allure.feature('Home Page');
-    await allure.testCaseId('CT001');
-    await allure.displayName('Validating status code 200 for home page');
-    await allure.description('This test case validates that the home page returns a status code 200, indicating that the page is accessible and loaded successfully.');
-    await allure.owner('Tiago Lima');
-    await allure.severity('critical');
-    await allure.tags('home-page','status-code');
+  await allure.feature('Home Page');
+  await allure.testCaseId('CT001');
+  await allure.displayName('Validating home page status code');
+  await allure.description('This test case verifies that the home page returns a status code of 200, indicating successful loading of the page.');
+  await allure.owner('Tiago Lima');
+  await allure.severity('blocker');
+  await allure.tags('home-page','status-code','load-validation');
     
   const response = await page.request.get('/');
     
