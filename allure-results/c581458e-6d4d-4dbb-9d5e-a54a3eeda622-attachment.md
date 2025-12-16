@@ -4,47 +4,47 @@
 - generic [active] [ref=e1]:
   - banner [ref=e2]:
     - generic [ref=e5]:
-      - link "Website for automation practice" [ref=e8]:
+      - link "Website for automation practice" [ref=e8] [cursor=pointer]:
         - /url: /
         - img "Website for automation practice" [ref=e9]
       - list [ref=e12]:
         - listitem [ref=e13]:
-          - link " Home" [ref=e14]:
+          - link " Home" [ref=e14] [cursor=pointer]:
             - /url: /
             - generic [ref=e15]: 
             - text: Home
         - listitem [ref=e16]:
-          - link " Products" [ref=e17]:
+          - link " Products" [ref=e17] [cursor=pointer]:
             - /url: /products
             - generic [ref=e18]: 
             - text: Products
         - listitem [ref=e19]:
-          - link " Cart" [ref=e20]:
+          - link " Cart" [ref=e20] [cursor=pointer]:
             - /url: /view_cart
             - generic [ref=e21]: 
             - text: Cart
         - listitem [ref=e22]:
-          - link " Signup / Login" [ref=e23]:
+          - link " Signup / Login" [ref=e23] [cursor=pointer]:
             - /url: /login
             - generic [ref=e24]: 
             - text: Signup / Login
         - listitem [ref=e25]:
-          - link " Test Cases" [ref=e26]:
+          - link " Test Cases" [ref=e26] [cursor=pointer]:
             - /url: /test_cases
             - generic [ref=e27]: 
             - text: Test Cases
         - listitem [ref=e28]:
-          - link " API Testing" [ref=e29]:
+          - link " API Testing" [ref=e29] [cursor=pointer]:
             - /url: /api_list
             - generic [ref=e30]: 
             - text: API Testing
         - listitem [ref=e31]:
-          - link " Video Tutorials" [ref=e32]:
+          - link " Video Tutorials" [ref=e32] [cursor=pointer]:
             - /url: https://www.youtube.com/c/AutomationExercise
             - generic [ref=e33]: 
             - text: Video Tutorials
         - listitem [ref=e34]:
-          - link " Contact us" [ref=e35]:
+          - link " Contact us" [ref=e35] [cursor=pointer]:
             - /url: /contact_us
             - generic [ref=e36]: 
             - text: Contact us
@@ -59,17 +59,17 @@
           - heading "AutomationExercise" [level=1] [ref=e48]
           - heading "Full-Fledged practice website for Automation Engineers" [level=2] [ref=e49]
           - paragraph [ref=e50]: All QA engineers can use this website for automation practice and API testing either they are at beginner or advance level. This is for everybody to help them brush up their automation skills.
-          - link "Test Cases" [ref=e51]:
+          - link "Test Cases" [ref=e51] [cursor=pointer]:
             - /url: /test_cases
-            - button "Test Cases" [ref=e52] [cursor=pointer]
-          - link "APIs list for practice" [ref=e53]:
+            - button "Test Cases" [ref=e52]
+          - link "APIs list for practice" [ref=e53] [cursor=pointer]:
             - /url: /api_list
-            - button "APIs list for practice" [ref=e54] [cursor=pointer]
+            - button "APIs list for practice" [ref=e54]
         - img "demo website for practice" [ref=e56]
-    - link "" [ref=e57]:
+    - link "" [ref=e57] [cursor=pointer]:
       - /url: "#slider-carousel"
       - generic [ref=e58]: 
-    - link "" [ref=e59]:
+    - link "" [ref=e59] [cursor=pointer]:
       - /url: "#slider-carousel"
       - generic [ref=e60]: 
   - generic [ref=e63]:
@@ -77,64 +77,65 @@
       - heading "Category" [level=2] [ref=e66]
       - generic [ref=e67]:
         - heading " Women" [level=4] [ref=e70]:
-          - link " Women" [ref=e71]:
+          - link " Women" [ref=e71] [cursor=pointer]:
             - /url: "#Women"
             - generic [ref=e73]: 
             - text: Women
         - heading " Men" [level=4] [ref=e76]:
-          - link " Men" [ref=e77]:
+          - link " Men" [ref=e77] [cursor=pointer]:
             - /url: "#Men"
             - generic [ref=e79]: 
             - text: Men
-        - heading " Kids" [level=4] [ref=e82]:
-          - link " Kids" [ref=e83]:
-            - /url: "#Kids"
-            - generic [ref=e85]: 
-            - text: Kids
-      - generic:
-        - insertion:
+        - generic [ref=e81]:
           - generic:
-            - iframe
+            - insertion:
+              - generic:
+                - iframe
+          - heading " Kids" [level=4] [ref=e82]:
+            - link " Kids" [ref=e83] [cursor=pointer]:
+              - /url: "#Kids"
+              - generic [ref=e85]: 
+              - text: Kids
       - generic [ref=e86]:
         - heading "Brands" [level=2] [ref=e87]
         - list [ref=e89]:
           - listitem [ref=e90]:
-            - link "(6) Polo" [ref=e91]:
+            - link "(6) Polo" [ref=e91] [cursor=pointer]:
               - /url: /brand_products/Polo
               - generic [ref=e92]: (6)
               - text: Polo
           - listitem [ref=e93]:
-            - link "(5) H&M" [ref=e94]:
+            - link "(5) H&M" [ref=e94] [cursor=pointer]:
               - /url: /brand_products/H&M
               - generic [ref=e95]: (5)
               - text: H&M
           - listitem [ref=e96]:
-            - link "(5) Madame" [ref=e97]:
+            - link "(5) Madame" [ref=e97] [cursor=pointer]:
               - /url: /brand_products/Madame
               - generic [ref=e98]: (5)
               - text: Madame
           - listitem [ref=e99]:
-            - link "(3) Mast & Harbour" [ref=e100]:
+            - link "(3) Mast & Harbour" [ref=e100] [cursor=pointer]:
               - /url: /brand_products/Mast & Harbour
               - generic [ref=e101]: (3)
               - text: Mast & Harbour
           - listitem [ref=e102]:
-            - link "(4) Babyhug" [ref=e103]:
+            - link "(4) Babyhug" [ref=e103] [cursor=pointer]:
               - /url: /brand_products/Babyhug
               - generic [ref=e104]: (4)
               - text: Babyhug
           - listitem [ref=e105]:
-            - link "(3) Allen Solly Junior" [ref=e106]:
+            - link "(3) Allen Solly Junior" [ref=e106] [cursor=pointer]:
               - /url: /brand_products/Allen Solly Junior
               - generic [ref=e107]: (3)
               - text: Allen Solly Junior
           - listitem [ref=e108]:
-            - link "(3) Kookie Kids" [ref=e109]:
+            - link "(3) Kookie Kids" [ref=e109] [cursor=pointer]:
               - /url: /brand_products/Kookie Kids
               - generic [ref=e110]: (3)
               - text: Kookie Kids
           - listitem [ref=e111]:
-            - link "(5) Biba" [ref=e112]:
+            - link "(5) Biba" [ref=e112] [cursor=pointer]:
               - /url: /brand_products/Biba
               - generic [ref=e113]: (5)
               - text: Biba
@@ -158,7 +159,7 @@
                 - text: Add to cart
           - list [ref=e132]:
             - listitem [ref=e133]:
-              - link " View Product" [ref=e134]:
+              - link " View Product" [ref=e134] [cursor=pointer]:
                 - /url: /product_details/1
                 - generic [ref=e135]: 
                 - text: View Product
@@ -179,7 +180,7 @@
                 - text: Add to cart
           - list [ref=e151]:
             - listitem [ref=e152]:
-              - link " View Product" [ref=e153]:
+              - link " View Product" [ref=e153] [cursor=pointer]:
                 - /url: /product_details/2
                 - generic [ref=e154]: 
                 - text: View Product
@@ -200,7 +201,7 @@
                 - text: Add to cart
           - list [ref=e170]:
             - listitem [ref=e171]:
-              - link " View Product" [ref=e172]:
+              - link " View Product" [ref=e172] [cursor=pointer]:
                 - /url: /product_details/3
                 - generic [ref=e173]: 
                 - text: View Product
@@ -221,7 +222,7 @@
                 - text: Add to cart
           - list [ref=e189]:
             - listitem [ref=e190]:
-              - link " View Product" [ref=e191]:
+              - link " View Product" [ref=e191] [cursor=pointer]:
                 - /url: /product_details/4
                 - generic [ref=e192]: 
                 - text: View Product
@@ -242,7 +243,7 @@
                 - text: Add to cart
           - list [ref=e208]:
             - listitem [ref=e209]:
-              - link " View Product" [ref=e210]:
+              - link " View Product" [ref=e210] [cursor=pointer]:
                 - /url: /product_details/5
                 - generic [ref=e211]: 
                 - text: View Product
@@ -263,7 +264,7 @@
                 - text: Add to cart
           - list [ref=e227]:
             - listitem [ref=e228]:
-              - link " View Product" [ref=e229]:
+              - link " View Product" [ref=e229] [cursor=pointer]:
                 - /url: /product_details/6
                 - generic [ref=e230]: 
                 - text: View Product
@@ -284,7 +285,7 @@
                 - text: Add to cart
           - list [ref=e246]:
             - listitem [ref=e247]:
-              - link " View Product" [ref=e248]:
+              - link " View Product" [ref=e248] [cursor=pointer]:
                 - /url: /product_details/7
                 - generic [ref=e249]: 
                 - text: View Product
@@ -305,7 +306,7 @@
                 - text: Add to cart
           - list [ref=e265]:
             - listitem [ref=e266]:
-              - link " View Product" [ref=e267]:
+              - link " View Product" [ref=e267] [cursor=pointer]:
                 - /url: /product_details/8
                 - generic [ref=e268]: 
                 - text: View Product
@@ -326,7 +327,7 @@
                 - text: Add to cart
           - list [ref=e284]:
             - listitem [ref=e285]:
-              - link " View Product" [ref=e286]:
+              - link " View Product" [ref=e286] [cursor=pointer]:
                 - /url: /product_details/11
                 - generic [ref=e287]: 
                 - text: View Product
@@ -347,7 +348,7 @@
                 - text: Add to cart
           - list [ref=e303]:
             - listitem [ref=e304]:
-              - link " View Product" [ref=e305]:
+              - link " View Product" [ref=e305] [cursor=pointer]:
                 - /url: /product_details/12
                 - generic [ref=e306]: 
                 - text: View Product
@@ -368,7 +369,7 @@
                 - text: Add to cart
           - list [ref=e322]:
             - listitem [ref=e323]:
-              - link " View Product" [ref=e324]:
+              - link " View Product" [ref=e324] [cursor=pointer]:
                 - /url: /product_details/13
                 - generic [ref=e325]: 
                 - text: View Product
@@ -389,7 +390,7 @@
                 - text: Add to cart
           - list [ref=e341]:
             - listitem [ref=e342]:
-              - link " View Product" [ref=e343]:
+              - link " View Product" [ref=e343] [cursor=pointer]:
                 - /url: /product_details/14
                 - generic [ref=e344]: 
                 - text: View Product
@@ -410,7 +411,7 @@
                 - text: Add to cart
           - list [ref=e360]:
             - listitem [ref=e361]:
-              - link " View Product" [ref=e362]:
+              - link " View Product" [ref=e362] [cursor=pointer]:
                 - /url: /product_details/15
                 - generic [ref=e363]: 
                 - text: View Product
@@ -431,7 +432,7 @@
                 - text: Add to cart
           - list [ref=e379]:
             - listitem [ref=e380]:
-              - link " View Product" [ref=e381]:
+              - link " View Product" [ref=e381] [cursor=pointer]:
                 - /url: /product_details/16
                 - generic [ref=e382]: 
                 - text: View Product
@@ -452,7 +453,7 @@
                 - text: Add to cart
           - list [ref=e398]:
             - listitem [ref=e399]:
-              - link " View Product" [ref=e400]:
+              - link " View Product" [ref=e400] [cursor=pointer]:
                 - /url: /product_details/18
                 - generic [ref=e401]: 
                 - text: View Product
@@ -473,7 +474,7 @@
                 - text: Add to cart
           - list [ref=e417]:
             - listitem [ref=e418]:
-              - link " View Product" [ref=e419]:
+              - link " View Product" [ref=e419] [cursor=pointer]:
                 - /url: /product_details/19
                 - generic [ref=e420]: 
                 - text: View Product
@@ -494,7 +495,7 @@
                 - text: Add to cart
           - list [ref=e436]:
             - listitem [ref=e437]:
-              - link " View Product" [ref=e438]:
+              - link " View Product" [ref=e438] [cursor=pointer]:
                 - /url: /product_details/20
                 - generic [ref=e439]: 
                 - text: View Product
@@ -515,7 +516,7 @@
                 - text: Add to cart
           - list [ref=e455]:
             - listitem [ref=e456]:
-              - link " View Product" [ref=e457]:
+              - link " View Product" [ref=e457] [cursor=pointer]:
                 - /url: /product_details/21
                 - generic [ref=e458]: 
                 - text: View Product
@@ -536,7 +537,7 @@
                 - text: Add to cart
           - list [ref=e474]:
             - listitem [ref=e475]:
-              - link " View Product" [ref=e476]:
+              - link " View Product" [ref=e476] [cursor=pointer]:
                 - /url: /product_details/22
                 - generic [ref=e477]: 
                 - text: View Product
@@ -557,7 +558,7 @@
                 - text: Add to cart
           - list [ref=e493]:
             - listitem [ref=e494]:
-              - link " View Product" [ref=e495]:
+              - link " View Product" [ref=e495] [cursor=pointer]:
                 - /url: /product_details/23
                 - generic [ref=e496]: 
                 - text: View Product
@@ -578,7 +579,7 @@
                 - text: Add to cart
           - list [ref=e512]:
             - listitem [ref=e513]:
-              - link " View Product" [ref=e514]:
+              - link " View Product" [ref=e514] [cursor=pointer]:
                 - /url: /product_details/24
                 - generic [ref=e515]: 
                 - text: View Product
@@ -599,7 +600,7 @@
                 - text: Add to cart
           - list [ref=e531]:
             - listitem [ref=e532]:
-              - link " View Product" [ref=e533]:
+              - link " View Product" [ref=e533] [cursor=pointer]:
                 - /url: /product_details/28
                 - generic [ref=e534]: 
                 - text: View Product
@@ -620,7 +621,7 @@
                 - text: Add to cart
           - list [ref=e550]:
             - listitem [ref=e551]:
-              - link " View Product" [ref=e552]:
+              - link " View Product" [ref=e552] [cursor=pointer]:
                 - /url: /product_details/29
                 - generic [ref=e553]: 
                 - text: View Product
@@ -641,7 +642,7 @@
                 - text: Add to cart
           - list [ref=e569]:
             - listitem [ref=e570]:
-              - link " View Product" [ref=e571]:
+              - link " View Product" [ref=e571] [cursor=pointer]:
                 - /url: /product_details/30
                 - generic [ref=e572]: 
                 - text: View Product
@@ -662,7 +663,7 @@
                 - text: Add to cart
           - list [ref=e588]:
             - listitem [ref=e589]:
-              - link " View Product" [ref=e590]:
+              - link " View Product" [ref=e590] [cursor=pointer]:
                 - /url: /product_details/31
                 - generic [ref=e591]: 
                 - text: View Product
@@ -683,7 +684,7 @@
                 - text: Add to cart
           - list [ref=e607]:
             - listitem [ref=e608]:
-              - link " View Product" [ref=e609]:
+              - link " View Product" [ref=e609] [cursor=pointer]:
                 - /url: /product_details/33
                 - generic [ref=e610]: 
                 - text: View Product
@@ -704,7 +705,7 @@
                 - text: Add to cart
           - list [ref=e626]:
             - listitem [ref=e627]:
-              - link " View Product" [ref=e628]:
+              - link " View Product" [ref=e628] [cursor=pointer]:
                 - /url: /product_details/35
                 - generic [ref=e629]: 
                 - text: View Product
@@ -725,7 +726,7 @@
                 - text: Add to cart
           - list [ref=e645]:
             - listitem [ref=e646]:
-              - link " View Product" [ref=e647]:
+              - link " View Product" [ref=e647] [cursor=pointer]:
                 - /url: /product_details/37
                 - generic [ref=e648]: 
                 - text: View Product
@@ -746,7 +747,7 @@
                 - text: Add to cart
           - list [ref=e664]:
             - listitem [ref=e665]:
-              - link " View Product" [ref=e666]:
+              - link " View Product" [ref=e666] [cursor=pointer]:
                 - /url: /product_details/38
                 - generic [ref=e667]: 
                 - text: View Product
@@ -759,157 +760,161 @@
               - generic [ref=e675] [cursor=pointer]:
                 - generic [ref=e676]: 
                 - text: Add to cart
-            - generic [ref=e678]:
-              - heading "Rs. 3000" [level=2] [ref=e679]
-              - paragraph [ref=e680]: Cotton Silk Hand Block Print Saree
-              - generic [ref=e681] [cursor=pointer]:
-                - generic [ref=e682]: 
+            - generic [ref=e677]:
+              - heading "Rs. 3000" [level=2] [ref=e678]
+              - paragraph [ref=e679]: Cotton Silk Hand Block Print Saree
+              - generic [ref=e680] [cursor=pointer]:
+                - generic [ref=e681]: 
                 - text: Add to cart
-          - list [ref=e684]:
-            - listitem [ref=e685]:
-              - link " View Product" [ref=e686]:
+          - list [ref=e683]:
+            - listitem [ref=e684]:
+              - link " View Product" [ref=e685] [cursor=pointer]:
                 - /url: /product_details/39
-                - generic [ref=e687]: 
+                - generic [ref=e686]: 
                 - text: View Product
-        - generic [ref=e689]:
-          - generic [ref=e690]:
-            - generic [ref=e691]:
-              - img "ecommerce website products" [ref=e692]
-              - heading "Rs. 3500" [level=2] [ref=e693]
-              - paragraph [ref=e694]: Rust Red Linen Saree
-              - generic [ref=e695] [cursor=pointer]:
-                - generic [ref=e696]: 
+        - generic [ref=e688]:
+          - generic [ref=e689]:
+            - generic [ref=e690]:
+              - img "ecommerce website products" [ref=e691]
+              - heading "Rs. 3500" [level=2] [ref=e692]
+              - paragraph [ref=e693]: Rust Red Linen Saree
+              - generic [ref=e694] [cursor=pointer]:
+                - generic [ref=e695]: 
                 - text: Add to cart
-            - generic [ref=e697]:
-              - heading "Rs. 3500" [level=2] [ref=e698]
-              - paragraph [ref=e699]: Rust Red Linen Saree
-              - generic [ref=e700] [cursor=pointer]:
-                - generic [ref=e701]: 
+            - generic [ref=e696]:
+              - heading "Rs. 3500" [level=2] [ref=e697]
+              - paragraph [ref=e698]: Rust Red Linen Saree
+              - generic [ref=e699] [cursor=pointer]:
+                - generic [ref=e700]: 
                 - text: Add to cart
-          - list [ref=e703]:
-            - listitem [ref=e704]:
-              - link " View Product" [ref=e705]:
+          - list [ref=e702]:
+            - listitem [ref=e703]:
+              - link " View Product" [ref=e704] [cursor=pointer]:
                 - /url: /product_details/40
-                - generic [ref=e706]: 
+                - generic [ref=e705]: 
                 - text: View Product
-        - generic [ref=e708]:
-          - generic [ref=e709]:
-            - generic [ref=e710]:
-              - img "ecommerce website products" [ref=e711]
-              - heading "Rs. 5000" [level=2] [ref=e712]
-              - paragraph [ref=e713]: Beautiful Peacock Blue Cotton Linen Saree
-              - generic [ref=e714] [cursor=pointer]:
-                - generic [ref=e715]: 
+        - generic [ref=e707]:
+          - generic [ref=e708]:
+            - generic [ref=e709]:
+              - img "ecommerce website products" [ref=e710]
+              - heading "Rs. 5000" [level=2] [ref=e711]
+              - paragraph [ref=e712]: Beautiful Peacock Blue Cotton Linen Saree
+              - generic [ref=e713] [cursor=pointer]:
+                - generic [ref=e714]: 
                 - text: Add to cart
-            - generic [ref=e716]:
-              - heading "Rs. 5000" [level=2] [ref=e717]
-              - paragraph [ref=e718]: Beautiful Peacock Blue Cotton Linen Saree
-              - generic [ref=e719] [cursor=pointer]:
-                - generic [ref=e720]: 
+            - generic [ref=e715]:
+              - heading "Rs. 5000" [level=2] [ref=e716]
+              - paragraph [ref=e717]: Beautiful Peacock Blue Cotton Linen Saree
+              - generic [ref=e718] [cursor=pointer]:
+                - generic [ref=e719]: 
                 - text: Add to cart
-          - list [ref=e722]:
-            - listitem [ref=e723]:
-              - link " View Product" [ref=e724]:
+          - list [ref=e721]:
+            - listitem [ref=e722]:
+              - link " View Product" [ref=e723] [cursor=pointer]:
                 - /url: /product_details/41
-                - generic [ref=e725]: 
+                - generic [ref=e724]: 
                 - text: View Product
-        - generic [ref=e727]:
-          - generic [ref=e728]:
-            - generic [ref=e729]:
-              - img "ecommerce website products" [ref=e730]
-              - heading "Rs. 1400" [level=2] [ref=e731]
-              - paragraph [ref=e732]: Lace Top For Women
-              - generic [ref=e733] [cursor=pointer]:
-                - generic [ref=e734]: 
+        - generic [ref=e726]:
+          - generic [ref=e727]:
+            - generic [ref=e728]:
+              - img "ecommerce website products" [ref=e729]
+              - heading "Rs. 1400" [level=2] [ref=e730]
+              - paragraph [ref=e731]: Lace Top For Women
+              - generic [ref=e732] [cursor=pointer]:
+                - generic [ref=e733]: 
                 - text: Add to cart
-            - generic [ref=e735]:
-              - heading "Rs. 1400" [level=2] [ref=e736]
-              - paragraph [ref=e737]: Lace Top For Women
-              - generic [ref=e738] [cursor=pointer]:
-                - generic [ref=e739]: 
+            - generic [ref=e734]:
+              - heading "Rs. 1400" [level=2] [ref=e735]
+              - paragraph [ref=e736]: Lace Top For Women
+              - generic [ref=e737] [cursor=pointer]:
+                - generic [ref=e738]: 
                 - text: Add to cart
-          - list [ref=e741]:
-            - listitem [ref=e742]:
-              - link " View Product" [ref=e743]:
+          - list [ref=e740]:
+            - listitem [ref=e741]:
+              - link " View Product" [ref=e742] [cursor=pointer]:
                 - /url: /product_details/42
-                - generic [ref=e744]: 
+                - generic [ref=e743]: 
                 - text: View Product
-        - generic [ref=e746]:
-          - generic [ref=e747]:
-            - generic [ref=e748]:
-              - img "ecommerce website products" [ref=e749]
-              - heading "Rs. 1389" [level=2] [ref=e750]
-              - paragraph [ref=e751]: GRAPHIC DESIGN MEN T SHIRT - BLUE
-              - generic [ref=e752] [cursor=pointer]:
-                - generic [ref=e753]: 
+        - generic [ref=e745]:
+          - generic [ref=e746]:
+            - generic [ref=e747]:
+              - img "ecommerce website products" [ref=e748]
+              - heading "Rs. 1389" [level=2] [ref=e749]
+              - paragraph [ref=e750]: GRAPHIC DESIGN MEN T SHIRT - BLUE
+              - generic [ref=e751] [cursor=pointer]:
+                - generic [ref=e752]: 
                 - text: Add to cart
-            - generic [ref=e754]:
-              - heading "Rs. 1389" [level=2] [ref=e755]
-              - paragraph [ref=e756]: GRAPHIC DESIGN MEN T SHIRT - BLUE
-              - generic [ref=e757] [cursor=pointer]:
-                - generic [ref=e758]: 
+            - generic [ref=e753]:
+              - heading "Rs. 1389" [level=2] [ref=e754]
+              - paragraph [ref=e755]: GRAPHIC DESIGN MEN T SHIRT - BLUE
+              - generic [ref=e756] [cursor=pointer]:
+                - generic [ref=e757]: 
                 - text: Add to cart
-          - list [ref=e760]:
-            - listitem [ref=e761]:
-              - link " View Product" [ref=e762]:
+          - list [ref=e759]:
+            - listitem [ref=e760]:
+              - link " View Product" [ref=e761] [cursor=pointer]:
                 - /url: /product_details/43
-                - generic [ref=e763]: 
+                - generic [ref=e762]: 
                 - text: View Product
-      - generic [ref=e764]:
-        - heading "recommended items" [level=2] [ref=e765]
-        - generic [ref=e766]:
-          - generic [ref=e767]:
+      - generic [ref=e763]:
+        - heading "recommended items" [level=2] [ref=e764]
+        - generic [ref=e765]:
+          - generic [ref=e766]:
             - text:   
             - generic:
-              - generic [ref=e771]:
-                - img "ecommerce website products" [ref=e772]
-                - heading "Rs. 1500" [level=2] [ref=e773]
-                - paragraph [ref=e774]: Stylish Dress
-                - generic [ref=e775] [cursor=pointer]:
-                  - generic [ref=e776]: 
+              - generic [ref=e770]:
+                - img "ecommerce website products" [ref=e771]
+                - heading "Rs. 1500" [level=2] [ref=e772]
+                - paragraph [ref=e773]: Stylish Dress
+                - generic [ref=e774] [cursor=pointer]:
+                  - generic [ref=e775]: 
                   - text: Add to cart
-              - generic [ref=e780]:
-                - img "ecommerce website products" [ref=e781]
-                - heading "Rs. 600" [level=2] [ref=e782]
-                - paragraph [ref=e783]: Winter Top
-                - generic [ref=e784] [cursor=pointer]:
-                  - generic [ref=e785]: 
+              - generic [ref=e779]:
+                - img "ecommerce website products" [ref=e780]
+                - heading "Rs. 600" [level=2] [ref=e781]
+                - paragraph [ref=e782]: Winter Top
+                - generic [ref=e783] [cursor=pointer]:
+                  - generic [ref=e784]: 
                   - text: Add to cart
-              - generic [ref=e789]:
-                - img "ecommerce website products" [ref=e790]
-                - heading "Rs. 400" [level=2] [ref=e791]
-                - paragraph [ref=e792]: Summer White Top
-                - generic [ref=e793] [cursor=pointer]:
-                  - generic [ref=e794]: 
+              - generic [ref=e788]:
+                - img "ecommerce website products" [ref=e789]
+                - heading "Rs. 400" [level=2] [ref=e790]
+                - paragraph [ref=e791]: Summer White Top
+                - generic [ref=e792] [cursor=pointer]:
+                  - generic [ref=e793]: 
                   - text: Add to cart
-          - link "" [ref=e795]:
+          - link "" [ref=e794] [cursor=pointer]:
             - /url: "#recommended-item-carousel"
-            - generic [ref=e796]: 
-          - link "" [ref=e797]:
+            - generic [ref=e795]: 
+          - link "" [ref=e796] [cursor=pointer]:
             - /url: "#recommended-item-carousel"
-            - generic [ref=e798]: 
-  - insertion [ref=e800]:
-    - iframe [ref=e802]:
-      - generic [active] [ref=f1e1]:
-        - generic [ref=f1e3]:
-          - link:
-            - /url: https://googleads.g.doubleclick.net/aclk?sa=l&ai=Ck3e1WIsoaYWsONmm9cYPu9DtiAiv8prNgwG98pe79xTb2R4QASD9tJ6VAWDN8O6ArAOgAamJ28koyAECqAMByAPJBKoEgQJP0ApZNHZcpnk-ZloXdi-NXlJUtarMSnNgZipDHAKAhvVZIj8HeEf5Qk17mjMeIYBDLCk0ggEO93jAUdkkd914L6lOLitJRIBd9f9fPooOIfsuRKNTNdh-kobO30H83epzs_abD62bjc6F4MMBmRwLSvhkEhLtoeMQHRVypGY_sqLh8-lv_aL_IVp4acTyYMVLq938amk89LWVYGqPEUiTsbaU4ahGvWcAO5kvSjOEFcmvMq32YRggQPPQO4IE1za2X34z0Wl_6zRCVeywojQG8C3ewYU9LeoInPtsBOJAXM1Tf9BSDosxpvSRZfaoh167qxKdns3vPUkwFEkJ-yxVxcAE0szt2vIEiAXTg73NUKAGAoAHqcGrqQOoB6fMsQKoB-LYsQKoB6a-G6gHzM6xAqgH89EbqAeW2BuoB6qbsQKoB47OG6gHk9gbqAfw4BuoB-6WsQKoB_6esQKoB6--sQKoB9XJG6gH2baxAqgHmgaoB_-esQKoB9-fsQKoB_jCsQKoB_vCsQLYBwHSCC8IgGEQARifATIIioKAgICAgAg6DYBAgMCAgICAqIACqANIvf3BOljmmZbC7pKRA7EJfH0H4itr3JGACgGYCwHICwGiDAOQAQGqDQJCUsgNAeoNEwi5v7rC7pKRAxVZU90CHTtoG4GIDgnYEw3QFQGYFgHKFgIKAPgWAYAXAbIXAhgBuhcCOAGyGAkSAuNZGAIiAQDQGAGyGQE3whkCCAE&gclid=EAIaIQobChMIhbiWwu6SkQMVWVPdAh07aBuBEAEYASAAEgJfYfD_BwE&num=1&cid=CAQSswEAwksa0RxXyekzvPbMwtgwlpPwgDuPXDJSOBnIyiwbKsLJnVdgkp_m7GoxChOzFhcHq_xeqmESqeyioY29RekI63Usu933JX94NyhqFXf9XEL62jXu0MBtpbKdYWNuOldjJ9WeWSLBpnhGHP17U5Q1lurdqiD44b3OcrHd6RZeYMEpCk4aq-whEwbaumOFHyoExXh1haFAsruHusloahePUGcLWgPQXuvC3D2IJUryQZfR9hgB&sig=AOD64_1pZ28DAtvtTX4y7U2tB-VnYGWAlw&client=ca-pub-1677597403311019&rf=2&nb=2&adurl=https://www.starlink.com/br/residential%3Freferral%3DRC-1195276-75811-68%26utm_source%3Dgoogle%26utm_medium%3Dpaid%26utm_campaign%3Dsls_br_dis_ggl_ptg_imk%26utm_content%3Dsls_br_dis_ggl_ptg_dem_res_hds_v4m_stc_pt-br_black-studio-pmo-799%26gad_source%3D5%26gad_campaignid%3D21637317075
-          - img [ref=f1e7] [cursor=pointer]
-          - button [ref=f1e9] [cursor=pointer]:
-            - img [ref=f1e10]
-        - iframe
-  - contentinfo [ref=e803]:
-    - generic [ref=e808]:
-      - heading "Subscription" [level=2] [ref=e809]
-      - generic [ref=e810]:
-        - textbox "Your email address" [ref=e811]
-        - button "" [ref=e812] [cursor=pointer]:
-          - generic [ref=e813]: 
-        - paragraph [ref=e814]:
+            - generic [ref=e797]: 
+  - insertion [ref=e799]
+  - contentinfo [ref=e801]:
+    - generic [ref=e806]:
+      - heading "Subscription" [level=2] [ref=e807]
+      - generic [ref=e808]:
+        - textbox "Your email address" [ref=e809]
+        - button "" [ref=e810] [cursor=pointer]:
+          - generic [ref=e811]: 
+        - paragraph [ref=e812]:
           - text: Get the most recent updates from
           - text: our site and be updated your self...
-    - paragraph [ref=e818]: Copyright © 2021 All rights reserved
-  - link "" [ref=e819]:
-    - /url: "#top"
-    - generic [ref=e820]: 
+    - generic [ref=e813]:
+      - paragraph [ref=e816]: Copyright © 2021 All rights reserved
+      - insertion [ref=e818]
+  - text: 
+  - insertion [ref=e820]:
+    - iframe [ref=e823]:
+      - iframe [ref=f1e1]:
+        - generic [ref=f2e2]:
+          - iframe [ref=f2e5]:
+            - generic [active]:
+              - link:
+                - /url: javascript:void(window.open(window.clickTag, '_blank'))
+          - generic [ref=f2e6]:
+            - generic:
+              - img [ref=f2e10] [cursor=pointer]
+              - button [ref=f2e12] [cursor=pointer]:
+                - img [ref=f2e13]
 ```

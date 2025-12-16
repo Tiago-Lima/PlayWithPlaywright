@@ -19,6 +19,12 @@ export class HomePage {
     readonly featuredItensProducts: Locator;
     readonly featuredItensOverlay: Locator;
     readonly featuredItensAddToCartButton: Locator;
+    //Recomended Items
+    readonly recomendedItensTitle: Locator;
+    readonly recomendedItensCarrousel: Locator;
+    readonly recomendedItensPreviousButton: Locator;
+    readonly recomendedItensNextButton: Locator;
+
 
     constructor(page: Page) {   
     this.page = page;
@@ -36,6 +42,11 @@ export class HomePage {
     this.featuredItensProducts = page.locator('.features_items .product-image-wrapper');
     this.featuredItensOverlay = page.locator('.features_items .product-overlay');
     this.featuredItensAddToCartButton = this.featuredItensOverlay.locator('.add-to-cart');
+    //Recomended Items constructor
+    this.recomendedItensTitle = page.locator('.recommended_items h2.title');
+    this.recomendedItensCarrousel = page.locator('#recommended-item-carousel');
+    this.recomendedItensPreviousButton = this.recomendedItensCarrousel.locator('a[data-slide="prev"]');
+    this.recomendedItensNextButton = this.recomendedItensCarrousel.locator('a[data-slide="next"]');
 
     }
 
@@ -185,8 +196,38 @@ export class HomePage {
         return overlay.locator('.add-to-cart');
       }
          
-//**************************************************************** */
-      
+//***************************Recommended Items methods************************************* */
+      /**
+       * 
+       * @returns number of products in Recommended Items section
+       */
+      async getRecommendedItemsProductsCount(): Promise<number> {
+        return await this.recomendedItensCarrousel.locator('.item').count();
+      }
+
+      /**
+       * 
+       * @param index index of product in Recommended Items section
+       * @returns Locator of product at index in Recommended Items section
+       */
+      getRecommendedItemProduct(index: number): Locator {
+        return this.recomendedItensCarrousel.locator('.item').nth(index);
+      }
+
+      /**
+       * Clicks on previous button of Recommended Items carrousel
+       */
+      async goToPreviousRecommendedItems(): Promise<void> {
+        await this.recomendedItensPreviousButton.click();
+      }
+      /**
+       * Clicks on next button of Recommended Items carrousel
+       */
+      async goToNextRecommendedItems(): Promise<void> {
+        await this.recomendedItensNextButton.click();
+      }
 
     
-  }
+
+      
+}

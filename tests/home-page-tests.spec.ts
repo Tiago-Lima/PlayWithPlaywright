@@ -59,7 +59,7 @@ test.describe('Tests for home page components', () => {
     await allure.displayName('Validating menu items functionality');
     await allure.description('This test case validates the presence, visibility, and functionality of the main menu items on the home page.');
     await allure.owner('Tiago Lima');
-    await allure.severity('medium');
+    await allure.severity('criitical');
     await allure.tags('home-page','menu-items','navigation');
 
     const homePage = new HomePage(page);
@@ -180,7 +180,7 @@ test.describe('Tests for home page components', () => {
         await allure.displayName('Validating Featured Items product information visibility');
         await allure.description('This test case checks that each product in the Featured Items section displays its name, price, and image correctly.');
         await allure.owner('Tiago Lima');
-        await allure.severity('medium');
+        await allure.severity('critical');
         await allure.tags('home-page','featured-items','product-information');
 
         const homePage = new HomePage(page);  
@@ -197,4 +197,20 @@ test.describe('Tests for home page components', () => {
         }
       });
     
-});
+      // *****************************Recomended Items section tests *******************************
+      // Validating Recommended Items section
+      test('validating Recommended Items section', async ({ page }) => {
+        await allure.feature('Home Page');
+        await allure.testCaseId('CT009');
+        await allure.displayName('Validating Recommended Items section title visibility and text');
+        await allure.description('This test case checks the visibility and correctness of the title in the Recommended Items section on the home page.');
+        await allure.owner('Tiago Lima');
+        await allure.severity('medium');
+        await allure.tags('home-page','recommended-items','section');
+
+        const homePage = new HomePage(page);  
+        await expect(homePage.recomendedItensTitle).toBeVisible();
+        await expect(homePage.recomendedItensTitle).toHaveText('recommended items');
+      });
+
+  });
