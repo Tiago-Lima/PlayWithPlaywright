@@ -1,34 +1,37 @@
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/Tiago-Lima/PlayWithPlaywright/playwright.yml?branch=main&style=for-the-badge)](https://github.com/Tiago-Lima/PlayWithPlaywright/actions)  [![Playwright](https://img.shields.io/badge/-playwright-%232EAD33?style=for-the-badge&logo=playwright&logoColor=white)](https://playwright.dev/)  [![Node.js](https://img.shields.io/badge/node.js-%2343853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)  
-# 📘 **PlayWithPlaywright**
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/Tiago-Lima/PlayWithPlaywright/playwright.yml?branch=main\&style=for-the-badge)](https://github.com/Tiago-Lima/PlayWithPlaywright/actions)
+[![Playwright](https://img.shields.io/badge/-playwright-%232EAD33?style=for-the-badge\&logo=playwright\&logoColor=white)](https://playwright.dev/)
+[![Node.js](https://img.shields.io/badge/node.js-%2343853D?style=for-the-badge\&logo=node.js\&logoColor=white)](https://nodejs.org/)
 
-Projeto criado para desenvolver habilidades práticas com **Playwright**, aplicando boas práticas de **automação de testes end-to-end**, **Page Object Model (POM)**, testes paralelos, relatórios e integração com CI.
+# 📘 PlayWithPlaywright
+
+Project created to develop practical skills with **Playwright**, applying best practices for **end-to-end test automation**, **Page Object Model (POM)**, parallel test execution, reporting, and CI integration.
 
 ---
 
-## 📦 **Tecnologias utilizadas**
+## 📦 Technologies Used
 
 * **Node.js**
 * **TypeScript**
 * **Playwright Test**
 * **Page Object Model (POM)**
-* **Allure Reports** 
-* **GitHub Actions** 
+* **Allure Reports**
+* **GitHub Actions**
 
 ---
 
-# 🚀 **1. Como instalar o projeto**
+## 🚀 1. How to Install the Project
 
-### 🔧 **Pré-requisitos**
+### 🔧 Prerequisites
 
-Certifique-se de ter instalado:
+Make sure you have installed:
 
-* **Node.js** (versão 18+ recomendada)
+* **Node.js** (version 18+ recommended)
 * **Git**
-* **NPM** ou **Yarn**
+* **NPM** or **Yarn**
 
 ---
 
-## 📥 **Clonar o repositório**
+## 📥 Clone the Repository
 
 ```bash
 git clone https://github.com/Tiago-Lima/PlayWithPlaywright.git
@@ -37,7 +40,7 @@ cd PlayWithPlaywright
 
 ---
 
-## 📚 **Instalar as dependências**
+## 📚 Install Dependencies
 
 ```bash
 npm install
@@ -45,13 +48,13 @@ npm install
 
 ---
 
-## 🧩 **Instalar os browsers do Playwright**
+## 🧩 Install Playwright Browsers
 
 ```bash
 npx playwright install
 ```
 
-(Se quiser instalar tudo, incluindo WebKit + dependências)
+To install all browsers including WebKit and system dependencies:
 
 ```bash
 npx playwright install --with-deps
@@ -59,35 +62,35 @@ npx playwright install --with-deps
 
 ---
 
-# ▶️ **2. Como executar os testes**
+## ▶️ 2. How to Run the Tests
 
-O Playwright já vem com um runner integrado, então basta usar:
+Playwright includes a built-in test runner.
 
-### ✔ **Executar todos os testes**
+### ✔ Run all tests
 
 ```bash
 npx playwright test
 ```
 
-### ✔ **Executar em modo UI (debug visual)**
+### ✔ Run in UI mode (visual debug)
 
 ```bash
 npx playwright test --ui
 ```
 
-### ✔ **Executar apenas um arquivo**
+### ✔ Run a single test file
 
 ```bash
 npx playwright test tests/home-page-tests.spec.ts
 ```
 
-### ✔ **Executar com um projeto específico (chromium, firefox, webkit)**
+### ✔ Run with a specific browser project
 
 ```bash
 npx playwright test --project=chromium
 ```
 
-### ✔ **Executar um teste filtrado**
+### ✔ Run a filtered test
 
 ```bash
 npx playwright test -g "Featured Items"
@@ -95,17 +98,17 @@ npx playwright test -g "Featured Items"
 
 ---
 
-# 🐞 **3. Debug e troubleshooting**
+## 🐞 3. Debug and Troubleshooting
 
-### 🔍 Abrir o navegador no modo “headed”
+### 🔍 Run tests in headed mode
 
 ```bash
 npx playwright test --headed
 ```
 
-### 🔍 Pausar a execução no meio do teste
+### 🔍 Pause execution during a test
 
-Adicione:
+Add the following line in your test:
 
 ```ts
 await page.pause();
@@ -113,120 +116,118 @@ await page.pause();
 
 ---
 
-# 📁 **4. Estrutura do Projeto**
+## 📁 4. Project Structure
 
 ```
 PlayWithPlaywright/
 │
-├── tests/               → arquivos de teste
+├── tests/               → test files
 │   └── home-page-tests.spec.ts
 │
 ├── pages/               → Page Objects
 │   └── HomePage.ts
 │
-├── playwright.config.ts → configurações globais
+├── playwright.config.ts → global configuration
 │
-├── package.json         → scripts e dependências
+├── package.json         → scripts and dependencies
 │
 └── README.md
 ```
 
-O projeto usa **Page Object Model (POM)** para garantir manutenibilidade e legibilidade.
+This project uses **Page Object Model (POM)** to ensure maintainability and readability.
 
 ---
 
-# 📊 **5. Relatórios**
+## 📊 5. Reports
 
-O Playwright gera relatórios automaticamente.
+Playwright automatically generates reports.
 
-### Primeiro copiar o histórico de testes para ter um relatório completo
+### Copy test history before generating Allure reports
 
-Antes de gerar o Allure Reports execute o seguinte comando:
+Before generating Allure Reports, run:
+
 ```bash
 npm run copy:history
 ```
-### ✔ **Abrir o relatório gerado pelo PlayWright**
 
-Após rodar os testes:
+### ✔ Open Playwright HTML report
 
 ```bash
 npx playwright show-report
 ```
-### ✔ **Abrir o relatório gerado pelo Allure Reports**
+
+### ✔ Open Allure report
 
 ```bash
 npm run allure:generate
 npm run allure:open
 ```
 
-# 🔧 **6. Pipeline (CI/CD) – GitHub Actions**
+---
 
-O pipeline roda automaticamente em cada push/pull request.
+## 🔧 6. CI/CD Pipeline – GitHub Actions
 
-### 🏃 **Para ver o pipeline funcionando**
+The pipeline runs automatically on every push or pull request.
 
-1. Vá até **GitHub > Actions**
-2. Escolha o workflow (ex: *Playwright Tests*)
-3. Veja:
+### 🏃 How to view the pipeline execution
 
-   * Testes rodando
+1. Go to **GitHub > Actions**
+2. Select the workflow (e.g. *Playwright Tests*)
+3. Check:
+
+   * Test execution
    * Logs
-   * Artefatos (incluindo relatório)
-   * Prints/screenshots em caso de falha
+   * Artifacts (reports, screenshots)
+   * Screenshots on failure
 
-### ✔ Relatórios no pipeline
+### ✔ Pipeline reports
 
-O workflow salva automaticamente:
+The workflow automatically stores:
 
-* Relatório HTML do Playwright
+* Playwright HTML Report
 * Screenshots
-* Videos (se habilitado)
+* Videos (if enabled)
 
-Esses arquivos ficam disponíveis para **download em “Artifacts”**.
+All files are available for download under **Artifacts**.
 
 ---
 
-# 🧪 **7. Scripts úteis (package.json)**
-
-
+## 🧪 7. Useful Scripts (package.json)
 
 ```json
-"scripts": {
-  "test": "playwright test",
-  "test:ui": "playwright test --ui",
-  "codegen": "playwright codegen",
-
-  "copy:history": "node copy-history.js",
-
-  "allure:generate": "npx allure generate ./allure-results --clean",
-  "allure:open": "npx allure open"
+{
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "codegen": "playwright codegen",
+    "copy:history": "node copy-history.js",
+    "allure:generate": "npx allure generate ./allure-results --clean",
+    "allure:open": "npx allure open"
+  }
 }
 ```
 
 ---
 
-# ⭐ **8. Objetivo do Projeto**
+## ⭐ 8. Project Goal
 
-Este repositório demonstra:
+This repository demonstrates:
 
-* Uso do Playwright com TypeScript
-* criação de testes robustos e confiáveis
-* validações de UI, animações, hover, carrosséis etc.
-* uso correto de Page Objects
-* execução paralela e cross-browser
-* execução automática no CI
-* geração de relatórios profissionais
-
+* Playwright with TypeScript
+* Robust and reliable test creation
+* UI validations (animations, hover, carousels, etc.)
+* Proper use of Page Objects
+* Parallel and cross-browser execution
+* Automatic CI execution
+* Professional reporting
 
 ---
 
-# 🤝 **Contribuições**
+## 🤝 Contributions
 
-Sinta-se livre para abrir:
+Feel free to open:
 
 * Issues
 * Pull Requests
-* Melhorias no POM
-* Novos cenários de automação
-
-
+* POM improvements
+* New automation scenarios
